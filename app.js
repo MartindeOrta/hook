@@ -10,7 +10,7 @@ var raw = JSON.stringify({
     "amountType": "balance",
     "amount": "60",
     "leverage": "2"
-  }
+  } 
 });
 
 var requestOptions = {
