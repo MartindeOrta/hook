@@ -1,27 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
+string=`{"name": "Hook TOMOUSDT", "secret": "uyccbu6wly8","side": "buy", "symbol": "{{TOMOUSDT}}","open": {"amountType": "balance", "amount": "60","leverage": "2"}}`
+jsondatos={
+    "name": "Hook TOMOUSDT",
+    "secret": "uyccbu6wly8",
+    "side": "buy",
+    "symbol": "{{TOMOUSDT}}",
+    "open": {
+      "amountType": "balance",
+      "amount": "60",
+      "leverage": "2"
+    }
+  }
 
 
-   
-                <td><input type="text" id="hookId" style="width: 100%" placeholder="Hook ID"></td>
-          
-              
-              
-                    <textarea id="hookBody" ></textarea>
-                    
-                    <button id="entrar">entrar</button>
-                </td>
-            </tr>
-        </tbody></table>
-    </form>
+entrar=document.getElementById('entrar')
+url = document.getElementById('hookId').value;
+data  = document.getElementById('hookBody').value
+// jsondato=JSON.parse(data)
+console.log(data)
+entrar.addEventListener('click', function(){
+    console.log(data)
+    url = "https://hook.finandy.com/PggoHJobbil5v5O6qFUK";
+    console.log(url)
+    data  = jsondatos
 
-    <script src="app.js"></script>
-</body>
-</html>
+
+    jsondatos={
+        "name": "Hook TOMOUSDT",
+        "secret": "uyccbu6wly8",
+        "side": "buy",
+        "symbol": "{{TOMOUSDT}}",
+        "open": {
+          "amountType": "balance",
+          "amount": "60",
+          "leverage": "2"
+        }
+      }
+
+
+
+
+fetch(url, {
+    method: 'POST', // or 'PUT'
+    body: jsondatos, // data can be `string` or {object}!
+    mode: 'cors',
+    headers:{
+      'Content-Type': 'application/json'
+    }
+  })
+.then(dato => function(){datos.json()})
+.then(datos=> console.log(datos))
+.catch(e => function(){console.log(e)})
+}
+  )
