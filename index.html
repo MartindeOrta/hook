@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>consulta apikeys</title>
 </head>
 <body>
 
+ 
+        <fieldset>
 
-    <form id="testForm" method="POST">
-        <table border="0" style="margin: auto;">
-            <tbody><tr>
-                <td align="right" style="padding-top: 3px;">Hook id:</td>
-                <td><input type="text" id="hookId" style="width: 100%" placeholder="Hook ID"></td>
-            </tr>
-            <tr>
-                <td align="right" style="padding-top: 5px;" valign="top">Request body:</td>
-                <td>
-                    <textarea id="hookBody" rows="30" cols="50" placeholder="{'field': 'value'}"></textarea><br>
-                    <br>
-                    <input type="submit">
-                </td>
-            </tr>
-        </tbody></table>
-    </form>
-
-    <script src="app.js"></script>
+        <legend>Ingreso usuario</legend>
+        <div>
+    <label for="apikey">Api key: </label>
+    <input type="text"  id="apikey"/>
+    <label for="apisecret">Api secret: </label>
+    <input type="text"  id="apisecret"/>
+</div>
+<div>
+    <button>Comprobar</button>
+</div>
+</fieldset>
+ 
+    <script src="consultaKeys.js"></script>
 </body>
 </html>
